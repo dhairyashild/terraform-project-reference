@@ -2,8 +2,8 @@
 # terraform aws create vpc
 resource "aws_vpc" "vpc" {
   cidr_block              = 
-  instance_tenancy        = 
-  enable_dns_hostnames    = 
+  instance_tenancy        =  "default"   //This attribute specifies whether the instances launched within the VPC should run on shared hardware (default) or on dedicated hardware (dedicated). The value for this attribute can be "default" or "dedicated"
+  enable_dns_hostnames    = true         //This attribute determines whether instances launched within the VPC will have DNS hostnames assigned to them. If set to true, AWS will automatically assign DNS hostnames to instances within the VPC. If set to false, DNS hostnames will not be assigned.
 
   tags      = {
     Name    = 
